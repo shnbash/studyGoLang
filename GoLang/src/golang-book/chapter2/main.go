@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Hello World!")
@@ -82,10 +84,57 @@ func main() {
 	fmt.Println("Total:", fTotal/(float64)(len(afVal)))
 
 	fmt.Println("Chanpter 06-2. SLICE")
-	var afSlice []float64
-	afSlice = make([]float64, 5)
-	afSlice[4] = 1
-	fmt.Println(afSlice)
-	fmt.Println(len(afSlice))
+	fmt.Println("CREATE SLICE 1")
+	var afSlice1 []float64
+	afSlice1 = make([]float64, 5)
+	afSlice1[4] = 1
+	fmt.Println(afSlice1)
+	fmt.Println(len(afSlice1))
+	fmt.Println("CREATE SLICE 2")
+	afSlice2 := []float64{1, 2, 3, 4, 5}
+	fmt.Println(afSlice2)
+	fmt.Println(len(afSlice2))
 
+	fmt.Println("CREATE SLICE 3")
+	var afSlice3 []float64
+	afSlice3 = make([]float64, 5, 10)
+	fmt.Println(afSlice3)
+	fmt.Println(len(afSlice3))
+
+	fmt.Println("CREATE SLICE 4")
+	afSlice4 := []float64{1, 2, 3, 4, 5}
+	afSliceCur := afSlice4[1:3]
+	fmt.Println(afSliceCur)
+	fmt.Println(len(afSliceCur))
+
+	fmt.Println("SLICE append")
+	anSlice1 := []int{1, 2, 3, 4, 5}
+	anSlice2 := append(anSlice1, 4, 5)
+	fmt.Println(anSlice1)
+	fmt.Println(len(anSlice1))
+	fmt.Println(anSlice2)
+	fmt.Println(len(anSlice2))
+	fmt.Println("SLICE copy")
+	anSlice3 := []int{1, 2, 3, 4, 5}
+	var anSlice4 []int
+	anSlice4 = make([]int, 5)
+	copy(anSlice4, anSlice3)
+	fmt.Println(anSlice3)
+	fmt.Println(len(anSlice3))
+	fmt.Println(anSlice4)
+	fmt.Println(len(anSlice4))
+
+	var mMap map[string]int
+	mMap = make(map[string]int)
+	mMap["key"] = 100
+	fmt.Println(mMap["key"])
+
+	mElements := make(map[string]string)
+	mElements["A"] = "A10"
+	mElements["B"] = "B10"
+	mElements["C"] = "C10"
+	mElements["D"] = "D10"
+	mElements["E"] = "E10"
+	fmt.Println(mElements)
+	fmt.Println(mElements["E"])
 }
