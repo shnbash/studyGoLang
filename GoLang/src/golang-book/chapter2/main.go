@@ -137,4 +137,10 @@ func main() {
 	mElements["E"] = "E10"
 	fmt.Println(mElements)
 	fmt.Println(mElements["E"])
+
+	/*
+	var mMap1 map[string]int
+	mMap1["key"] = 10
+	fmt.Println(mMap1["key"])
+	*/
 }
