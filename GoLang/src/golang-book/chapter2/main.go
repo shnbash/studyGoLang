@@ -4,7 +4,20 @@ import (
 	"fmt"
 )
 
+func average(afValue []float64) float64 {
+	fTotal := 0.0
+	for _, fValue := range afValue {
+		fTotal += fValue
+	}
+	return fTotal / float64(len(afValue))
+}
+
 func main() {
+	//fmt.Println("07. Function")
+	//var afValue11 [6]float64 { 89, 41, 99, 84, 66, 49 }
+	afValue11 := []float64{89, 41, 99, 84, 66, 49}
+	fmt.Println(average(afValue11))
+
 	fmt.Println("Hello World!")
 	fmt.Println("1 + 1 =", 1+1)
 	fmt.Println("1.0 + 1.0 =", 1.0+1.0)
@@ -138,9 +151,11 @@ func main() {
 	fmt.Println(mElements)
 	fmt.Println(mElements["E"])
 
-	/*
-	var mMap1 map[string]int
-	mMap1["key"] = 10
-	fmt.Println(mMap1["key"])
-	*/
+	szValue, nRv := mElements["E"]
+	fmt.Println(szValue, nRv)
+
+	mElements1 := map[string]string{
+		"H": "Hydrogen"}
+	fmt.Println(mElements1["H"])
+
 }
