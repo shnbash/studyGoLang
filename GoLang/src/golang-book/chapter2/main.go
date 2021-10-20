@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+func func_args(args ...int) int {
+	nTotal := 0
+	for _, nValue := range args {
+		nTotal += nValue
+	}
+	return nTotal
+}
+
 func average(afValue []float64) float64 {
 	fTotal := 0.0
 	for _, fValue := range afValue {
@@ -157,5 +165,11 @@ func main() {
 	mElements1 := map[string]string{
 		"H": "Hydrogen"}
 	fmt.Println(mElements1["H"])
+
+	mElement2 := map[string]map[string]string{}
+
+
+	var nVal21 [5]int{1,2,3,4,5}
+
 
 }
