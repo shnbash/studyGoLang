@@ -207,4 +207,6 @@ func main() {
 	fmt.Println(*stName2)
 	fmt.Println(stName2.y)
 
+	fmt.Println("TEST HP")
+
 }
