@@ -4,12 +4,18 @@ import (
 	"fmt"
 )
 
-func func_args(args ...int) int {
+type st_name struct {
+	x       float64
+	y       string
+	z, a, b int
+}
+
+func func_args(args ...int) (int, int) {
 	nTotal := 0
 	for _, nValue := range args {
 		nTotal += nValue
 	}
-	return nTotal
+	return nTotal, 100
 }
 
 func average(afValue []float64) float64 {
@@ -166,10 +172,39 @@ func main() {
 		"H": "Hydrogen"}
 	fmt.Println(mElements1["H"])
 
-	mElement2 := map[string]map[string]string{}
+	//mElement2 := map[string]map[string]string{}
 
+	anVal21 := [5]int{1, 2, 3, 4, 5}
+	fmt.Println(anVal21)
+	var nRet1, nRet2 int
+	nRet1, nRet2 = func_args(anVal21[0], anVal21[1], anVal21[2])
+	fmt.Println(nRet1, nRet2)
 
-	var nVal21 [5]int{1,2,3,4,5}
+	nVal21 := 0
+	func_add := func(x string, y int) (int, string) {
+		fmt.Println(x, y)
+		y++
+		return y, "haha"
+	}
+	fmt.Println(func_add("hoho", nVal21))
 
+	fmt.Println("POINTER")
+	//var pnVal1 *int
+	//pnVal1 = new(int)
+	var pnVal1 *int = new(int)
+	*pnVal1 = 1
+	fmt.Println(*pnVal1)
+
+	var stName1 st_name
+	stName2 := new(st_name)
+
+	stName1.a = 1
+	stName1.y = "dede"
+	fmt.Println(stName1)
+
+	stName2.b = 3
+	stName2.y = "eee"
+	fmt.Println(*stName2)
+	fmt.Println(stName2.y)
 
 }
