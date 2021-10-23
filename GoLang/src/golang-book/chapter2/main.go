@@ -4,6 +4,44 @@ import (
 	"fmt"
 )
 
+type circle_t struct {
+	x float64
+	y float64
+	z float64
+}
+
+type abc_t struct {
+	nVal1 int
+	nVal2 int
+}
+
+func rantangle(nWidth, nWeight float64) *circle_t {
+	aaa := new(circle_t)
+	aaa.x = nWidth
+	aaa.y = nWeight
+	aaa.z = 12.3
+	return aaa
+}
+
+func (stABC *abc_t) area() int {
+	return stABC.nVal1 * stABC.nVal2
+}
+
+func (_ abc_t) dummy() {
+	fmt.Println("dummy")
+}
+
+func func_stct() {
+	fmt.Println("func_stct")
+
+	stABC := abc_t{10, 20}
+
+	fmt.Println(stABC.area())
+	//fmt.Println(stABC.dummy())
+	stABC.dummy()
+
+}
+
 func average(afValue []float64) float64 {
 	fTotal := 0.0
 	for _, fValue := range afValue {
@@ -158,4 +196,5 @@ func main() {
 		"H": "Hydrogen"}
 	fmt.Println(mElements1["H"])
 
+	func_stct()
 }
