@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-<<<<<<< HEAD
+
 type circle_t struct {
 	x float64
 	y float64
@@ -41,7 +41,6 @@ func func_stct() {
 	//fmt.Println(stABC.dummy())
 	stABC.dummy()
 
-=======
 type st_name struct {
 	x       float64
 	y       string
@@ -54,7 +53,6 @@ func func_args(args ...int) (int, int) {
 		nTotal += nValue
 	}
 	return nTotal, 100
->>>>>>> 5806cb50273feeac53bb479f5934b7642eac38d5
 }
 
 func average(afValue []float64) float64 {
@@ -211,9 +209,7 @@ func main() {
 		"H": "Hydrogen"}
 	fmt.Println(mElements1["H"])
 
-<<<<<<< HEAD
 	func_stct()
-=======
 	//mElement2 := map[string]map[string]string{}
 
 	anVal21 := [5]int{1, 2, 3, 4, 5}
@@ -250,6 +246,4 @@ func main() {
 	fmt.Println(stName2.y)
 
 	fmt.Println("TEST HP")
-
->>>>>>> 5806cb50273feeac53bb479f5934b7642eac38d5
 }
